@@ -11,6 +11,7 @@ RUN apt-get install -yqq unzip curl\
 
 COPY . /data_collection/
 
-RUN pip install selenium==4.4.0
+RUN pip install selenium==4.4.0\
+    && sqlalchemy
 
 CMD ["python3", "/data_collection/main.py"]
